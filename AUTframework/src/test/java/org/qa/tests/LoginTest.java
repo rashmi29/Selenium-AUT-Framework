@@ -12,7 +12,7 @@ public class LoginTest extends ApplicationSetup{
 	LoginBL objLoginBL = new LoginBL();
 	CommonUtilities objCU = new CommonUtilities();
 
-	@Test(groups = { "Smoke", "Regression" })
+	@Test
 	@Parameters({"Browser"})
 	public void LoginTC(String browser) {
 		WebDriver driver = ApplicationSetup.getDriver();

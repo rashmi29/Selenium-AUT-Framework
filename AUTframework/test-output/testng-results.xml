@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2023-05-20T22:45:48 PDT" name="Suite" finished-at="2023-05-20T22:46:26 PDT" duration-ms="37305">
+    <groups>
+    </groups>
+    <test started-at="2023-05-20T22:45:48 PDT" name="Orange HRM" finished-at="2023-05-20T22:46:26 PDT" duration-ms="37305">
+      <class name="org.qa.tests.LoginTest">
+        <test-method is-config="true" signature="initReport(java.lang.String)[pri:0, instance:org.qa.tests.LoginTest@64e1dd11]" started-at="2023-05-20T22:45:48 PDT" name="initReport" finished-at="2023-05-20T22:45:48 PDT" duration-ms="485" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[DEV]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initReport -->
+        <test-method is-config="true" signature="init(java.lang.String,java.lang.String)[pri:0, instance:org.qa.tests.LoginTest@64e1dd11]" started-at="2023-05-20T22:45:48 PDT" name="init" finished-at="2023-05-20T22:45:54 PDT" duration-ms="5503" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[DEV]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- init -->
+        <test-method signature="LoginTC(java.lang.String)[pri:0, instance:org.qa.tests.LoginTest@64e1dd11]" started-at="2023-05-20T22:45:54 PDT" name="LoginTC" finished-at="2023-05-20T22:46:25 PDT" duration-ms="31572" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- LoginTC -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:org.qa.tests.LoginTest@64e1dd11]" started-at="2023-05-20T22:46:25 PDT" name="tearDown" finished-at="2023-05-20T22:46:26 PDT" duration-ms="130" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="repostStats()[pri:0, instance:org.qa.tests.LoginTest@64e1dd11]" started-at="2023-05-20T22:46:26 PDT" name="repostStats" finished-at="2023-05-20T22:46:26 PDT" duration-ms="12" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- repostStats -->
+      </class> <!-- org.qa.tests.LoginTest -->
+    </test> <!-- Orange HRM -->
+  </suite> <!-- Suite -->
+</testng-results>

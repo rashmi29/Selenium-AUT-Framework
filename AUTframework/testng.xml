@@ -5,9 +5,8 @@
 		<listener class-name="org.qa.utils.ExtentReportListener"></listener>
 	</listeners>
 	
-	<parameter name="groups" value="Regression" />
-	<parameter name="Environment" value="DEV" />
-	<parameter name="Browser" value="Chrome" />
+	<!--<parameter name="Browser" value="Chrome" />
+	<parameter name="Environment" value="DEV" />-->
 	
 	<test name="Orange HRM">
 		<classes>

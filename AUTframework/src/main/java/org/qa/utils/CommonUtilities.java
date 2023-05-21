@@ -125,31 +125,6 @@ public class CommonUtilities {
 		}
 	}
 
-	/**
-	 * zip report folder and save to zip folder under resources
-	 * 
-	 * @param env - environment name
-	 * @param grp - group name
-	 * @throws IOException
-	 */
-	public void zipper(String env, String grp) throws IOException {
-		ZipFile zp = null;
-		try {
-			DateFormat df = new SimpleDateFormat("ddMMMYYY-HHmm");
-			Date dt = new Date();
-
-			zp = new ZipFile(System.getProperty("user.dir") + resourcesPath + "\\zip\\Report_" + env + "_" + grp + "_"
-					+ df.format(dt) + ".zip");
-
-			zp.addFolder(new File(System.getProperty("user.dir") + resourcesPath + "\\Reports\\"));
-
-		} catch (ZipException e) {
-			log.error("Error in zipping report " + e.getMessage());
-		} finally {
-			zp.addFolder(new File(System.getProperty("user.dir") + resourcesPath + "\\Reports\\"));
-			zp.close();
-		}
-	}
 
 	public synchronized void browserTCcounter(String browserName) {
 		if (browserName.equalsIgnoreCase("chrome")) {
@@ -159,3 +134,5 @@ public class CommonUtilities {
 		}
 	}
 }
+
+

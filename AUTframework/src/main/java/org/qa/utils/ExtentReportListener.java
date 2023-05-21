@@ -1,5 +1,6 @@
 package org.qa.utils;
 
+import java.io.File;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
@@ -34,7 +35,7 @@ public class ExtentReportListener implements ITestListener {
 	public static ExtentReports extent;
 	public static ThreadLocal<ExtentTest> test = new ThreadLocal<>();
 	public static int TestStepCount = 0;
-	public static String Environment, groups;
+	public static String Environment;
 	public static int chromeTC = 0;
 	public static int firefoxTC = 0;
 	String ssFlag = objExcel.readCell("Configuration", "SCREENSHOT_FLAG");
@@ -43,24 +44,22 @@ public class ExtentReportListener implements ITestListener {
 	 * Initialize report and set required values for report
 	 * 
 	 * @param environment - environment name
-	 * @param browser     - browser name
-	 * @param groups      - group name
 	 */
 	@BeforeSuite(alwaysRun = true)
-	@Parameters({ "Environment", "groups" })
-	public synchronized void initReport(String environment, String groups) {
+	@Parameters({ "Environment"})
+	public synchronized void initReport(String environment) {
 		Date now = new Date();
 		int year = Calendar.getInstance().get(Calendar.YEAR);
 		String monthName = new SimpleDateFormat("MMMM").format(now);
 		int monthday = Calendar.getInstance().get(Calendar.DATE);
 
 		ExtentReportListener.Environment = environment;
-		ExtentReportListener.groups = groups;
 
 		SimpleDateFormat simpleDateFormat = new SimpleDateFormat("ddMMMyyyy-HHmm");
 		String date = simpleDateFormat.format(new Date());
 
-		String file = System.getProperty("user.dir") + "\\src\\main\\resources\\datapool\\" + "EnvData.properties";
+		String file = System.getProperty("user.dir") + File.separator + "src" + File.separator + "main" + File.separator
+				+ "resources" + File.separator + "datapool" + File.separator + "EnvData.properties";
 		String reportFolderPath = objCU.readPropertyFile(file, "TestReport");
 		String reportFileName = objExcel.readCell("Configuration", "REPORT_FILENAME");
 		String documentTitle = objExcel.readCell("Configuration", "DOCUMENT_TITLE");
@@ -69,14 +68,17 @@ public class ExtentReportListener implements ITestListener {
 
 		// Create an object of Extent Reports
 		log.debug("Initilizating Test Report.... ");
-		htmlReporter = new ExtentSparkReporter(
-				System.getProperty("user.dir") + reportFolderPath + "\\TestReports\\" + year + "\\" + monthName + "\\"
-						+ monthday + "\\" + reportFileName + Environment + groups + "_" + date + ".html");
+//		htmlReporter = new ExtentSparkReporter(
+//				System.getProperty("user.dir") + reportFolderPath + "\\TestReports\\" + year + "\\" + monthName + "\\"
+//						+ monthday + "\\" + reportFileName + Environment + "_" + date + ".html");
+		
+		htmlReporter = new ExtentSparkReporter(System.getProperty("user.dir") + File.separator + "src" + File.separator + "main" + File.separator
+				+ "resources" + File.separator + "reports" + File.separator +reportFileName + Environment + "_" + date + ".html");
 
-		log.debug("Test Path: " + System.getProperty("user.dir") + reportFolderPath + "\\TestReports" + year + "\\"
-				+ monthName + "\\" + monthday + "\\" + reportFileName + Environment + groups + "_" + date + ".html");
+		log.debug("Test Path: " + System.getProperty("user.dir") + File.separator + "src" + File.separator + "main" + File.separator
+				+ "resources" + File.separator + "reports" + File.separator +reportFileName + Environment + "_" + date + ".html");
 
-		htmlReporter.config().setDocumentTitle(documentTitle); //
+		htmlReporter.config().setDocumentTitle(documentTitle); 
 		htmlReporter.config().setReportName("<B>" + reportName + "</B>");
 		htmlReporter.config().setTheme(Theme.STANDARD);
 
@@ -84,7 +86,6 @@ public class ExtentReportListener implements ITestListener {
 		extent.attachReporter(htmlReporter);
 		extent.setSystemInfo("Application :", appName);
 		extent.setSystemInfo("Environment :", environment);
-		extent.setSystemInfo("Suite :", groups);
 	}
 
 	public static ThreadLocal<ExtentTest> getTest() {
@@ -197,11 +198,6 @@ public class ExtentReportListener implements ITestListener {
 		}
 
 		extent.flush();
-		try {
-			objCU.zipper(Environment, groups);
-		} catch (ZipException e) {
-			log.error("Error in <onFinish> " + e.getMessage());
-		}
 	}
 
 }

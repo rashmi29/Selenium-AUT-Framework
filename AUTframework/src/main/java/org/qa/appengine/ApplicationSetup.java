@@ -1,5 +1,6 @@
 package org.qa.appengine;
 
+import java.io.File;
 import java.io.IOException;
 import java.time.Duration;
 
@@ -10,12 +11,12 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeTest;
-import org.testng.annotations.Parameters;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.qa.utils.*;
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Parameters;
 
 public class ApplicationSetup extends ExtentReportListener{
 	public static Logger log = LogManager.getLogger(ApplicationSetup.class.getName());
@@ -26,12 +27,12 @@ public class ApplicationSetup extends ExtentReportListener{
 	public static String UID;
 	public static String PAS;
 	public static ThreadLocal<WebDriver> driver = new ThreadLocal<WebDriver>();
-	String filepath = System.getProperty("user.dir") + "\\src\\main\\resources\\datapool\\" + "EnvData.properties";
+	String filepath = System.getProperty("user.dir") + File.separator + "src" + File.separator + "main" + File.separator
+			+ "resources" + File.separator + "datapool" + File.separator + "EnvData.properties";
 
 	/**
 	 * Launches browser and set URL,UID and PWD
 	 * 
-	 
 	 * @param environment - environment name
 	 * @param browser     - browser name
 	 */
@@ -127,7 +128,7 @@ public class ApplicationSetup extends ExtentReportListener{
 	/**
 	 * Set test url
 	 * 
-	 * @param testURL - url to be set
+	 * @param testUrl - url to be set
 	 */
 	public void setTestURL(String testUrl) {
 		testURL = testUrl;
@@ -163,7 +164,7 @@ public class ApplicationSetup extends ExtentReportListener{
 	/**
 	 * Set PAS - password
 	 * 
-	 * @param pAS - password
+	 * @param pwd - password
 	 */
 	public void setPAS(String pwd) {
 		PAS = pwd;

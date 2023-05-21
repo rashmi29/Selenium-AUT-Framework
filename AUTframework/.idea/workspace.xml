@@ -5,10 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2d073968-0e93-4182-806d-5c04ee6b8c5e" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.classpath" beforeDir="false" afterPath="$PROJECT_DIR$/.classpath" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.settings/org.eclipse.core.resources.prefs" beforeDir="false" afterPath="$PROJECT_DIR$/.settings/org.eclipse.core.resources.prefs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.settings/org.eclipse.jdt.core.prefs" beforeDir="false" afterPath="$PROJECT_DIR$/.settings/org.eclipse.jdt.core.prefs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/e2e-logs.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/e2e-logs.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/qa/appengine/ApplicationSetup.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/qa/appengine/ApplicationSetup.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/qa/utils/CommonUtilities.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/qa/utils/CommonUtilities.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/qa/utils/ExtentReportListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/qa/utils/ExtentReportListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/qa/utils/RWExcel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/qa/utils/RWExcel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/datapool/EnvData.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/datapool/EnvData.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/log4j2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/log4j2.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/qa/tests/LoginTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/qa/tests/LoginTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/testng.xml" beforeDir="false" afterPath="$PROJECT_DIR$/testng.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -18,6 +24,9 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
@@ -37,6 +46,23 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="RunManager">
+    <configuration name="/Users/rashmipatel/eclipse-workspace/Selenium-AUT-Framework/Selenium-AUT-Framework/AUTframework/testng.xml" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="AUTframework" />
+      <option name="SUITE_NAME" value="$PROJECT_DIR$/testng.xml" />
+      <option name="TEST_OBJECT" value="SUITE" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="TestNG./Users/rashmipatel/eclipse-workspace/Selenium-AUT-Framework/Selenium-AUT-Framework/AUTframework/testng.xml" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">

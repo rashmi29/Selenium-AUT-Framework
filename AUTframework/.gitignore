@@ -1,1 +1,7 @@
 /target/
+/src/main/resources/reports/*
+/src/main/resources/reports/**/*.png
+/src/main/resources/reports/**/*.html
+/src/main/resources/**/*.zip
+/logs/
+/test-output/*

@@ -12,3 +12,6 @@ This is hybrid framework which is combination of modular and data driven framewo
   
 ### Command to run this project
 mvn test -DBrowser=Chrome -DEnvironment=DEV
+
+  ## Automation project framework overview
+  <img width="906" alt="image" src="https://github.com/rashmi29/fetch-coding-exercise/assets/35393664/7354e049-0c86-4fad-8a19-4e232f299fa9"><br>
